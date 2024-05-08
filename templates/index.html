@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Myelitis Detector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web application for detecting spinal cord diseases from images">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Abril+Fatface&display=swap">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" href="../static/leaf.png" type="image/x-icon">
+</head>	
+
+<body>
+    <div class="container"><img src="../static/bgd1.jpg" id="right"></div>
+    <div class="wrapper">
+        <div class="heading">
+            MYELITIS DISEASE DETECTOR
+        </div>
+        <div class="text">
+            <p><b>Share a picture of the Spinal Cord and get immediate results!</b></p>
+        </div>
+        <img src="../static/image2.png" id="right">
+        <form id="analysis-form" action="/predict" method="post" enctype="multipart/form-data">
+            <div class="imgbox">
+                <img src="../static/image2.png" class="img" id="selected_image">
+                <div class="middle">
+                    <div class="add"><span>SELECT IMAGE</span></div>
+                    <input name="Select File" id="imagefile" type="file" />
+                </div>
+            </div>
+            
+            <button id="analyze-button" class="analyze-button">
+                <span>Analyze</span>
+            </button>
+        </form>
+        <div id="result">
+            <!-- Prediction result will be displayed here -->
+        </div>
+    </div>
+    <div class="info-box">
+		<h2>Spinal Cord</h2>
+		<p>The spinal cord is essential for transmitting sensory information to the brain and motor signals to the body, coordinating reflex actions, regulating autonomic functions, and facilitating complex movements. It also provides structural support and protection within the vertebral column, crucial for overall body function and coordination.</p>
+	</div>
+	<div class="slide" id="slide2">
+        <h2>Slide 2 Content</h2>
+        <p>This is the content for slide 2.</p>
+    </div>
+</div>
+	
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="../static/client.js"></script>
+</body>
+
+</html>
